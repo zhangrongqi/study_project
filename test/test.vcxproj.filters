@@ -16,6 +16,9 @@
     <Filter Include="头文件\MySort">
       <UniqueIdentifier>{5ad6c9ba-f460-4b1c-a59c-2245dfeb6602}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\TCPIP_data_transmission">
+      <UniqueIdentifier>{c8144bd4-3eee-4de6-b2e2-c0d7bff17807}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -91,6 +94,9 @@
     </ClInclude>
     <ClInclude Include="PromiseAndFuture.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPIP_data_transmission.h">
+      <Filter>头文件\TCPIP_data_transmission</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
