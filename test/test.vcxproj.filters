@@ -98,5 +98,14 @@
     <ClInclude Include="TCPIP_data_transmission.h">
       <Filter>头文件\TCPIP_data_transmission</Filter>
     </ClInclude>
+    <ClInclude Include="MyCoroutine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="atomic_flag_learn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LockFreeStack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

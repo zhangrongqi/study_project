@@ -11,12 +11,11 @@ public:
         : nodesPerBlock_(nodesPerBlock), freeList_(nullptr) {
         // 静态断言，比较T和viod*大小，T的size必须 >= void*的size
         static_assert(sizeof(T) >= sizeof(void*), "sizeof(T) must be at least sizeof(void*)");
-        // 初始化内存池内存
+
         expandPool();
     }
 
     ~FixedSizeMemoryPool() {
-        // 通过迭代器释放blocks容器中的内存
         for (auto block : blocks_) {
             ::operator delete(block);
         }
@@ -24,7 +23,7 @@ public:
 
     T* allocate() {
         std::lock_guard<std::mutex> lock(mutex_);
-        // 如果freeList_为nullptr，代表内存池已空，需要扩充内存池
+
         if (!freeList_) {
             expandPool();
         }
@@ -53,10 +52,10 @@ private:
         freeList_ = newBlock;
     }
 
-    size_t nodesPerBlock_;      // 每个内存块可存储的对象数量
-    void* freeList_;            // 空闲链表头
-    std::vector<void*> blocks_; // 所有已分配的内存块
-    std::mutex mutex_;          // 线程安全锁
+    size_t nodesPerBlock_;      
+    void* freeList_;            
+    std::vector<void*> blocks_; 
+    std::mutex mutex_;          
 };
 
 // 测试代码

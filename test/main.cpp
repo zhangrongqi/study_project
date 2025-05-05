@@ -872,40 +872,41 @@
 //	return 0;
 //}
 
-#include "PromiseAndFuture.h"
+//#include "PromiseAndFuture.h"
+//
+//int main()
+//{
+//	constexpr long long steps = 000000000;
+//
+//	std::promise<double> promise_pi;
+//
+//	//auto future_pi = promise_pi.get_future();
+//
+//	//auto future_pi_share = promise_pi.get_future().share();
+//
+//	std::shared_future<double> future_pi_share{ promise_pi.get_future() };
+//
+//	std::thread t1(PromiseAndFuture::compute_pi, steps, std::move(promise_pi));
+//
+//	//std::thread t2(PromiseAndFuture::display_pi, std::move(future_pi));
+//
+//	std::thread t3(PromiseAndFuture::display_pi_share, future_pi_share);
+//
+//	std::thread t4(PromiseAndFuture::display_pi_share, future_pi_share);
+//
+//
+//	if (t1.joinable())
+//		t1.join();
+//
+//	//if (t2.joinable())
+//	//	t2.join();
+//
+//	if (t3.joinable())
+//		t3.join();
+//
+//	if (t4.joinable())
+//		t4.join();
+//
+//	return 0;
+//}
 
-int main()
-{
-	constexpr long long steps = 000000000;
-
-	std::promise<double> promise_pi;
-
-	//auto future_pi = promise_pi.get_future();
-
-	//auto future_pi_share = promise_pi.get_future().share();
-
-	std::shared_future<double> future_pi_share{ promise_pi.get_future() };
-
-	std::thread t1(PromiseAndFuture::compute_pi, steps, std::move(promise_pi));
-
-	//std::thread t2(PromiseAndFuture::display_pi, std::move(future_pi));
-
-	std::thread t3(PromiseAndFuture::display_pi_share, future_pi_share);
-
-	std::thread t4(PromiseAndFuture::display_pi_share, future_pi_share);
-
-
-	if (t1.joinable())
-		t1.join();
-
-	//if (t2.joinable())
-	//	t2.join();
-
-	if (t3.joinable())
-		t3.join();
-
-	if (t4.joinable())
-		t4.join();
-
-	return 0;
-}

@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="..\include\modbus-tcp.h" />
     <ClInclude Include="..\include\modbus.h" />
+    <ClInclude Include="atomic_flag_learn.h" />
     <ClInclude Include="CollectRain.h" />
     <ClInclude Include="dijkstra.h" />
     <ClInclude Include="GenericFactory.h" />
@@ -154,8 +155,10 @@
     <ClInclude Include="HeapSort.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="ListMergeSort.h" />
+    <ClInclude Include="LockFreeStack.h" />
     <ClInclude Include="MemoryPool.h" />
     <ClInclude Include="MergeSort.h" />
+    <ClInclude Include="MyCoroutine.h" />
     <ClInclude Include="MyFunction.h" />
     <ClInclude Include="MyList.h" />
     <ClInclude Include="myStack.h" />
